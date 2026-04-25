@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>ArkOne Advisors</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Borel&family=Delius+Swash+Caps&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    </head>
+
+    <body>
+        <!-- Menú lateral / barra superior al hacer scroll -->
+        
+
+        <!-- Imagen/Videos principal -->
+        <header>
+          <nav id="menuContainer" class="menu-container" role="navigation" aria-label="Main">
+        
+            <!-- LOGO (IZQUIERDA) -->
+            <a href="#home" class="menu-icon">
+              <img src="../Imagenes/logo-SS-black-03.png" alt="Logo ArkOne" />
+            </a>
+        
+            <!-- BOTÓN HAMBURGUESA (DERECHA) -->
+            <div class="menu-hamburguer" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </div>
+        
+            <!-- MENÚ -->
+            <ul id="menu" class="menu">
+              <li><a href="#servicesSection">Services</a></li>
+              <li><a href="#team">About Us</a></li>
+            </ul>
+        
+          </nav>
+        </header>
+        
+
+    <!-- sección para los videos-->
+    <section class="imagen_fondo animate" id="home">
+      <div class="overlay"></div>
+
+      <video id="video1" class="background-video video-transition-1 visible" autoplay muted loop preload="auto" playsinline>
+          <source src="../Imagenes/video_1.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+      </video>
+      <video id="video2" class="background-video video-transition-2 hidden" autoplay muted loop preload="auto" playsinline>
+          <source src="../Imagenes/video_2_2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+      </video>
+
+      <div class="overlay-content">
+          <h1>ARKONE ADVISORS</h1>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intodescription animate">
+        <div class="text-center">
+            <p class="pintodescription">
+                "ArkOne Advisors is a boutique commercial real estate firm that offers
+                personalized service and deep market expertise across all major asset
+                types. <br><br/>
+                Our client-focused approach enables tailored solutions and
+                quick responses to changing market conditions.
+                <br /><br />
+                Expert Guidance, Proven Results: Maximizing Value in Commercial Real
+                Estate."
+            </p>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="container-fluid toggle-content cards animate" id="servicesSection" style="display: block;" aria-label="Services">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <article class="card card-1" data-bg="../Imagenes/asset-sales11.png">
+            <div class="card-body">
+              <h5 class="card-title">ASSET SALES</h5>
+              <p class="card-text">
+                Our experienced Commercial Real Estate (CRE) advisors can assist
+                both novice and seasoned real estate investors in understanding
+                the latest market trends, including asset-based transactions,
+                interest rates, etc.Additionally, we provide Buyer and Seller representation for all
+                commercial real estate purchase and sale transactions.
+              </p>
+              <div class="card-extra" style="display: none;">
+                
+              </div>
+              
+            </div>
+          </article>
+        </div>
+    
+        <div class="col-md-4">
+          <article class="card card-2" data-bg="../Imagenes/Notes-sales11.png">
+            <div class="card-body">
+              <h5 class="card-title">NOTE SALES</h5>
+              <p class="card-text">
+                Arkone Advisors specialize in assisting lenders, servicers, and
+                investors in valuing and selling CRE loans, bringing decades of
+                experience to the table. Our goal is to achieve the utmost value in commercial real estate
+                note sales by leveraging our vast network and comprehensive
+                knowledge of all asset types and markets throughout the United
+                States.
+              </p>
+              <div class="card-extra" style="display: none;">
+                
+              </div>
+              
+            </div>
+          </article>
+        </div>
+    
+        <div class="col-md-4">
+          <article class="card card-3" data-bg="../Imagenes/sba-loan11.png">
+            <div class="card-body">
+              <h5 class="card-title">SBA LOAN ADVISORY SVCS.</h5>
+              <p class="card-text">
+                ArkOne Advisors have a wealth of transactional experience in
+                supporting Government Guarantee Lenders (GGLs), Third-Party
+                Lenders (TPLs), Certified Development Companies (CDCs), and
+                borrowers with their SBA loans.Our close collaboration with these constituents can help us
+                optimize loan recoveries, minimize losses, and unleash the full
+                potential of our client’s SBA funded assets and loans
+              </p>
+              <div class="card-extra" style="display: none;">
+                
+              </div>
+              
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonialCarousel" class="carousel slide animate" data-ride="carousel" aria-label="Testimonials">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-8 coltesti">
+                        <div class="testimonial">
+                            <p>
+                                <span class="quote">"</span> ARK ONE provided exceptional
+                                service and helped us find the perfect property. Highly
+                                recommend!<span class="quote">"</span>
+                            </p>
+                            <p class="text-right pcarrusel">- Sara Jay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-8 coltesti">
+                    <div class="testimonial">
+                        <p>
+                        <span class="quote">"</span> The team at ARK ONE was
+                        professional and attentive to our needs. We couldn't be
+                        happier with our experience. <span class="quote">"</span>
+                        </p>
+                        <p class="text-right pcarrusel">- Cosculluela</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                <div class="col-md-8 coltesti">
+                    <div class="testimonial">
+                    <p>
+                        <span class="quote">"</span> Thanks to ARK ONE, we found our
+                        dream home. Their expertise and dedication made all the
+                        difference. <span class="quote">"</span>
+                    </p>
+                    <p class="text-right pcarrusel">- Michael</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev" aria-label="Previous testimonial">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next cprev" href="#testimonialCarousel" role="button" data-slide="next" aria-label="Next testimonial">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
+
+    <!-- Team / Contact -->
+    <section class="row justify-content-center want animate" id="team">
+      <div class="col-12 text-center mt-5">
+        <h2>THE TEAM</h2>
+      </div>
+
+      <div class="col-md-4 text-center containeraboutus mt-5">
+        <img class="imgaboutus" src="../Imagenes/Jiotrans.png" alt="Jiovanny Restrepo" loading="lazy" />
+        <p class="pcontact">Jiovanny Restrepo <br />Broker | Advisor</p>
+      </div>
+
+      <div class="col-md-4 text-center containeracalendy mt-5">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/angelrestrepodev/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="row justify-content-center fmargin">
+        <div class="col-md-3 mt-5">
+          <img src="../Imagenes/Jio White.png" alt="Jio White" class="imgfooter" />
+          <p class="pfooter1">Jiovanny Restrepo</p>
+          <p class="pfooter2">Comercial Realtor</p>
+          <p class="pfooter1">ARK ONE</p>
+        </div>
+
+        <div class="col-md-3 mt-5">
+          <p class="pfooter">CREATE SINCE</p>
+          <p class="pfooter2">March 2, 2025</p>
+        </div>
+        
+        <div class="col-md-3 mt-5">
+          <p class="text-center pfooter">CRE NEW</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Hover de cards: cambia fondo de la sección -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".card");
+        const servicesSection = document.getElementById("servicesSection");
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            const bgImage = card.getAttribute("data-bg");
+            if (bgImage) {
+              servicesSection.style.backgroundImage = `url(${bgImage})`;
+              servicesSection.style.backgroundSize = "cover";
+              servicesSection.style.backgroundPosition = "center";
+              servicesSection.style.backgroundRepeat = "no-repeat";
+            }
+          });
+
+          card.addEventListener("mouseleave", () => {
+            servicesSection.style.backgroundImage = "";
+          });
+        });
+
+        // En móviles (sin hover), usa "click" para mostrar descripción
+        if (window.matchMedia("(hover: none)").matches) {
+          cards.forEach((card) => {
+            card.addEventListener("click", () => {
+              const p = card.querySelector(".card-text");
+              if (p) p.style.opacity = p.style.opacity === "1" ? "0" : "1";
+            });
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".card");
+        const servicesSection = document.getElementById("servicesSection");
+
+        // Efecto de hover para pantallas grandes
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            if (!window.matchMedia("(hover: none)").matches) {
+              const bgImage = card.getAttribute("data-bg");
+              if (bgImage) {
+                servicesSection.style.backgroundImage = `url(${bgImage})`;
+                servicesSection.style.backgroundSize = "cover";
+                servicesSection.style.backgroundPosition = "center";
+                servicesSection.style.backgroundRepeat = "no-repeat";
+              }
+            }
+          });
+
+          card.addEventListener("mouseleave", () => {
+            if (!window.matchMedia("(hover: none)").matches) {
+              servicesSection.style.backgroundImage = "";
+            }
+          });
+        });
+
+        // Mostrar "Ver más" solo en dispositivos móviles
+        if (window.matchMedia("(hover: none)").matches) {
+          const seeMoreLinks = document.querySelectorAll(".see-more");
+
+          seeMoreLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+              event.preventDefault();
+              const cardExtra = link.previousElementSibling;
+              if (cardExtra.style.display === "none") {
+                cardExtra.style.display = "block";
+                link.textContent = "Less...";
+              } else {
+                cardExtra.style.display = "none";
+                link.textContent = "Read more...";
+              }
+            });
+          });
+        }
+      });
+    </script>
+
+    <!-- Menú: lateral -> barra superior al hacer scroll -->
+   
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuContainer = document.getElementById("menuContainer");
+        const menuToggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+      
+        let homeItem = null;
+      
+        window.addEventListener("scroll", () => {
+          menu.classList.remove("open");
+
+          if (window.scrollY > 80) {
+            menuContainer.classList.add("scrolled");
+      
+            // Crear opción "Home" si no existe
+            if (!homeItem) {
+              homeItem = document.createElement("li");
+              homeItem.innerHTML = `<a href="#home">Home</a>`;
+              menu.prepend(homeItem); // lo pone primero
+            }
+          } else {
+            menuContainer.classList.remove("scrolled");
+      
+            // Quitar opción "Home" al volver arriba
+            if (homeItem) {
+              homeItem.remove();
+              homeItem = null;
+            }
+          }
+        });
+      
+        menuToggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          menu.classList.toggle("open");
+        });
+      
+        document.addEventListener("click", () => {
+          menu.classList.remove("open");
+        });
+      });
+      </script>
+      
+      
+
+    <!-- Animaciones on-scroll -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".animate");
+    
+        const handleScroll = () => {
+          elements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            // Verifica si el elemento está dentro del viewport
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              element.classList.add("active");
+            } else {
+              element.classList.remove("active");
+            }
+          });
+        };
+    
+        // Escucha el evento de scroll
+        window.addEventListener("scroll", handleScroll);
+        // Llama a la función inicialmente para verificar los elementos visibles
+        handleScroll();
+      });
+    </script>
+
+    <!-- Crossfade de videos -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const video1 = document.getElementById("video1");
+        const video2 = document.getElementById("video2");
+        let currentVideo = 1;
+    
+        // Forzar reproducción inicial
+        video1.play().catch(() => {});
+        video2.play().catch(() => {});
+    
+        setInterval(() => {
+          if (currentVideo === 1) {
+            // Ocultar video1 y mostrar video2
+            video1.classList.remove("visible");
+            video1.classList.add("hidden");
+            video2.classList.remove("hidden");
+            video2.classList.add("visible");
+            video2.play().catch(() => {});
+            currentVideo = 2;
+          } else {
+            // Ocultar video2 y mostrar video1
+            video2.classList.remove("visible");
+            video2.classList.add("hidden");
+            video1.classList.remove("hidden");
+            video1.classList.add("visible");
+            video1.play().catch(() => {});
+            currentVideo = 1;
+          }
+        }, 30000); // Cambia cada 30 segundos
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Verifica si es una resolución de móvil
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          const cards = document.querySelectorAll(".card");
+          const servicesSection = document.getElementById("servicesSection");
+
+          // Configuración del IntersectionObserver
+          const observerOptions = {
+            root: null, // Usa el viewport completo
+            threshold: 0.6, // Detecta cuando el 60% de la tarjeta está visible
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              const cardText = entry.target.querySelector(".card-text");
+              const bgImage = entry.target.getAttribute("data-bg");
+
+              if (entry.isIntersecting) {
+                // Si la tarjeta está centrada, muestra el texto y cambia el fondo
+                cardText.style.opacity = "1";
+                if (bgImage) {
+                  servicesSection.style.backgroundImage = `url(${bgImage})`;
+                  servicesSection.style.backgroundSize = "cover";
+                  servicesSection.style.backgroundPosition = "center";
+                  servicesSection.style.backgroundRepeat = "no-repeat";
+                }
+              } else {
+                // Si la tarjeta deja de estar centrada, oculta el texto y limpia el fondo
+                cardText.style.opacity = "0";
+                servicesSection.style.backgroundImage = "";
+              }
+            });
+          }, observerOptions);
+
+          // Observa cada tarjeta
+          cards.forEach((card) => observer.observe(card));
+        }
+      });
+    </script>
+  </body>
+</html>

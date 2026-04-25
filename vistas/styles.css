@@ -1,0 +1,630 @@
+/* Base */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Mulish', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 3rem;
+    overflow-x: hidden;
+  }
+  
+  /* Imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  img.navbar-brandheader { height: 40px; width: 100px; }
+  img.slogan { height: 50px; width: 200px; }
+  
+  /* Videos de fondo */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 1.5s ease-in-out; /* Transición suave entre videos */
+  }
+  
+  .imagen_fondo {
+    position: relative; height: 100vh; overflow: hidden;
+  }
+  
+  .overlay-content {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; color: white; z-index: 1;
+  }
+  
+  .video-transition {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; z-index: -1;
+    transition: opacity 1.5s ease-in-out;
+  }
+  .background-video.hidden {
+    opacity: 0;
+    pointer-events: none; /* Evita que el video oculto interfiera */
+  }
+  
+  .background-video.visible {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 0;
+  }
+  
+  /* Título hero */
+  .imagen_fondo h1{
+    font-family: 'Mulish', sans-serif;
+    font-style: italic; font-weight: 900;
+    font-size: 3rem; color: white; text-align: center;
+    margin: 0; line-height: 1.2;
+    padding-left: 100px; padding-bottom: 0;
+  }
+  
+  .imagen_fondo::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+    font-style: italic !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem;
+  }
+  
+  /* Overlay content pos adaptada */
+  .overlay-content {
+    top: 93%; left: 28%;
+    transform: translate(-50%, -50%);
+    text-align: center; color: white;
+  }
+  
+  .overlay-content h1 { font-size: 100px; margin-bottom: 50px; }
+  
+  .overlay-content .btn {
+    margin: 10px; background-color: transparent; color: #fff !important;
+    border-color: #f8f9fa !important; border: none !important;
+  }
+  
+  /* Intro */
+  .intodescripcion p{
+    font-size: 25px; font-family: 'Mulish', sans-serif; font-style: italic;
+  }
+  
+  .pintodescription{
+    font-size: 20px; font-family: 'Mulish', sans-serif; font-style: italic;
+    font-weight: 450; padding-top: 10px; padding-bottom:10px; margin: 180px;
+  }
+  
+  /* Grid genérico */
+  .row { background-color: transparent; padding: 0 20px 0 0; margin-top: 50px; margin-bottom: 40px; }
+  .box { background-color: transparent; border: transparent; border-radius: 5px; padding: 20px; text-align: center; }
+  
+  .btn{
+    background-color: transparent !important; border-color: black !important;
+    transition: none !important; color: black !important; margin: 10px;
+  }
+  
+  .text-item{ height: 50px; width: 50px; padding: 10px; }
+  .img-fluid{ height: 100%; width: 100%; padding: 1px; }
+  
+  /* Toggle content */
+  .toggle-content {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  
+  .toggle-content img { border-radius: 5px; }
+  
+  /* HR */
+  hr {
+    border: none; border-top: 1px solid #ccc; opacity: 0.5; margin: 20px 0;
+  }
+  
+  /* Botones de despliegue */
+  .toggle-section {
+    font-size: 18px; padding: 10px 20px; border: none !important;
+    transition: 0.3s ease, color 0.3s ease; height: 100%; width: 100%;
+  }
+  .rowbtn{ height: 100%; width: 100% !important; }
+  .container-fluid { width: 100% !important; padding: 0; margin: 0; background-color: transparent !important; }
+  
+  .toggle-section:hover { background-color: #007bff; color: white; }
+  
+  /* Toggle content caja */
+  .toggle-content {
+    border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9 !important;
+  }
+  .toggle-content img { border-radius: 5px; height: 50px; width: 50px; }
+  
+  /* Testimonios */
+  .theysay{ color: black; background-color: transparent; font-size: 100px; margin-top: 50px; }
+  .theysay h4{ font-size:15px; font-family:'Bold', sans-serif; }
+  
+  .testimonial {
+    background: transparent !important; padding: 20px; border-radius: 5px;
+    text-align: center; font-size: 25px;
+  }
+  .testimonial .quote {
+    font-size: 40px; font-weight: bold; color: #333; margin: 0 5px;
+  }
+  
+  .carousel-inner{
+    background-color: transparent; font-family: "Mulish", sans-serif !important; font-style: italic;
+  }
+  .carousel-inner .pcarrusel{ font-size: 18px; }
+  
+  /* Flechas carrusel */
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; background-image: none;
+  }
+  .carousel-control-prev-icon::after, .carousel-control-next-icon::after {
+    content: ''; display: inline-block; width: 20px; height: 20px;
+    border: solid black; border-width: 0 3px 3px 0;
+  }
+  .carousel-control-prev-icon::after { transform: rotate(135deg); margin-left: -2px; }
+  .carousel-control-next-icon::after { transform: rotate(-45deg); margin-right: -2px; }
+  
+  .comillas{ font-size: 40px; }
+  
+  /* Sección Team */
+  .want{ background-color: transparent; }
+  .want .img{ background-color: transparent; }
+  
+  .imgcontact{ height: 150px; width: 150px; } /* (única definición) */
+  .pcontact{ padding-top: 15px; }
+  .logo{ height: 60px; width: 60px; }
+  .imgaboutus{ height: 350px; width: 350px; margin-left: 20px; }
+  
+  /* Footer */
+  footer {
+    background: linear-gradient(to top, #333, #ffffff); color: white; padding: 10px 0;
+  }
+  .imgfooter{ padding: 0 0 0 100px; height: 20px; width: 200px; }
+  .pfooter{ color: white; padding-left: 100px; }
+  .pfooter1{ color: white; padding-left:100px; padding-top: 5px; padding-bottom: 0; }
+  .pfooter2{ color: rgb(213, 206, 206); padding-left:100px; padding-top: 5px; }
+  
+
+
+  /* Menú lateral / barra superior */
+  /* CONTENEDOR NAV */
+/* CONTENEDOR NAV */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* LOGO */
+.menu-icon {
+  margin-right: auto;
+}
+
+.menu-icon img {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* HAMBURGUESA */
+.menu-hamburguer {
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  position: relative; /* CLAVE */
+  z-index: 2;
+  
+}
+
+/* MENÚ (INICIAL: VERTICAL) */
+.menu {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%) translateX(40px);
+  
+  display: flex;
+  gap: 20px;
+  list-style: none;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+/* LINKS */
+.menu li a {
+  padding: 0;                /* quitamos cápsula interna */
+  border-radius: 0;          /* quitamos forma ovalada */
+  background: none;          /* quitamos fondo individual */
+  backdrop-filter: none;     /* quitamos blur individual */
+
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+
+  text-shadow: 0 2px 4px rgba(0,0,0,1);
+  transition: opacity 0.06s ease;
+}
+
+/* SCROLL STATE */
+.menu-container.scrolled {
+  background: transparent;
+}
+
+/* MENÚ ABIERTO */
+.menu.open {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  pointer-events: auto;
+}
+
+/* CUANDO HAY SCROLL Y SE ABRE → HORIZONTAL */
+.menu-container.scrolled .menu.open {
+  flex-direction: row;
+}
+
+
+
+.menu-hamburguer {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.menu li a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+  
+  /* Botones servicios extra */
+  .botones-servicios .btn-block{ color: white; background-color: black; }
+  
+  /* Tarjetas (services) */
+  .toggle-content { display: none; }
+  .custom-btn { padding: 15px 100px; font-size: 1.5rem; margin: 150px; }
+  .vertical-line { width: 2px; height: 50px; background-color: black; margin: 0 15px; }
+  
+  /* Contenedor de tarjetas */
+  .cards{
+    display: block; /* visible */
+    min-height: 500px;
+    width: 100vw !important;
+    overflow: hidden; margin: 0; padding: 0 !important;
+    background-color: transparent !important;
+  }
+  
+  /* Filas/columnas */
+  .row.no-gutters { min-height: 500px; margin: 0; padding: 0; }
+  .col-md-4 { padding: 0; }
+  
+  /* Tarjeta */
+  .card {
+    border: none; margin: 0;
+    height: 1000px; width: 100%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; text-align: center;
+    background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important;
+    overflow: hidden; border-radius: 10px; background-color: transparent !important;
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 0;
+    background: transparent !important; z-index: 1;
+  }
+  .card-body {
+    display: flex; flex-direction: column; justify-content: center !important; align-items: center;
+    height: 100%; width: 100%; transition: all 0.3s ease-in-out;
+    position: relative; z-index: 2; background-color: rgba(0,0,0,0.5) !important;
+  }
+  .card-body h5 {
+    font-size: 2rem; font-weight: bold; color: #fff; margin: 100px; opacity: 1; transition: opacity 0.3s ease-in-out;
+  }
+  .card-body p {
+    color:#fff; opacity: 0; transition: opacity 0.3s ease-in-out;
+    background-color: transparent !important; display: inline-block; margin: 0 auto; max-width: 80%; line-height: 1.6; font-size: 1rem;
+  }
+  .card:hover .card-body p { opacity: 1; }
+  .card:hover .card-body h5 { opacity: 1; text-decoration: underline; }
+  
+  /* Fondo de la sección services (imagen por defecto) */
+  #servicesSection {
+    position: relative; background-size: cover; background-position: center; background-repeat: no-repeat;
+    width: 100%; min-height: 500px; padding: 20px 0;
+    background-image: url('../Imagenes/elszs.jpeg');
+  }
+  .card-3 h5{ font-size: 1.6rem; }
+
+  .see-more{
+    color: white;
+    text-decoration: underline;
+  }
+  /* Calendly */
+  .calendly-inline-widget{
+    height: 350px !important; width: 300px !important; margin-left: 150px;
+  }
+  
+  /* Efecto B/N -> color para fotos Team */
+  .containeraboutus img { filter: grayscale(100%); transition: filter 0.3s ease-in-out; }
+  .containeraboutus img:hover { filter: grayscale(0%); }
+  
+  /* Elementos animados inicialmente ocultos */
+  .animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  /* Elementos visibles con la animación aplicada */
+  .animate.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @keyframes slideInFromBottom {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ===================== */
+  /*      MEDIA QUERIES    */
+  /* ===================== */
+  
+  /* XS: <576px */
+  @media (max-width: 575.98px) {
+    html { font-size: 14px; }
+    body { font-size: 1rem; }
+    .background-video {
+      position: absolute;
+      top: 50% !important; /* Centra el video verticalmente */
+      left: 50% !important; /* Centra el video horizontalmente */
+      width: 100% !important;
+      height: 100% !important;
+      transform: translate(-50%, -50%) !important; /* Ajusta el video al centro */
+      object-fit: cover !important; /* Asegura que el video llene el contenedor */
+      z-index: -1;
+    }
+    .imagen_fondo { height: 100vh; }
+    .overlay-content { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .overlay-content h1 { font-size: 5.25rem; margin-bottom: 0; padding: 0; }
+
+    .menu-container.scrolled img{ margin: 0 25px 0 0; }
+
+    .menu li a { font-size: 21px; padding: 0px;}
+
+    .pintodescription { margin: 50px; font-size: 1.25rem; }
+  
+    #servicesSection { 
+      width: 100% !important;
+      min-height: 1px; 
+      background-image: url('../Imagenes/asset-sales11.png');
+    }
+    .card-extra {
+      display: none;
+    }
+    .row.no-gutters { min-height: auto; }
+    .card { height: 460px; }
+    .card-body h5 { margin: 20px; font-size: 1.25rem; }
+    .card-body p { font-size: 1.05rem; max-width: 90%; }
+  
+    .carousel { width: 100% !important; }
+    .testimonial { text-align: center;  font-size: 1.25rem;}
+    .testimonial .quote { font-size: 22px; }
+    .carousel-inner { padding: 35px; margin-left: 0; }
+    
+    .testimonial .pcarrusel { padding-right: 0; }
+    .carousel-control-prev-icon { left: 10px; }
+    .carousel-control-next-icon { right: 10px; }
+  
+    .want { width: 100%; padding-right: 0; }
+    .imgaboutus {         
+      width: 300px;
+      height: 300px; 
+    }
+  
+    .calendly-inline-widget { 
+      height: 600px !important;
+      width: 90% !important;
+      margin-left: 25px; 
+    }
+  
+    footer { width: 100%; }
+    .imgfooter, .pfooter, .pfooter1, .pfooter2 { padding-left: 20px; }
+  }
+  
+  /* SM: 576–767px */
+  @media (min-width:576px) and (max-width: 767.98px) {
+    html { font-size: 15px; }
+    body { font-size: 1.05rem; }
+  
+    .imagen_fondo { height: 100vh; }
+    .overlay-content h1 {
+      font-size: 4.5rem;
+      margin: 0 0 550px 350px;
+      padding: 0;
+  }
+  
+    .intodescription { width: 100% !important; margin: 20px auto; }
+    .pintodescription { margin: 70px; }
+  
+    .cards { height: auto !important; width: 100% !important; }
+    .card { height: 520px; }
+    .card-body p { width: 90%; }
+    .card-extra {
+      display: none;
+    }
+  
+    .carousel { width: 100%; }
+    .carousel-inner { margin-left: 0; width: 100% !important; padding: 50px; }
+    .testimonial { font-size: 20px;}
+  
+    .want { width: 100%; }
+    .calendly-inline-widget{ height: 380px !important; width: 100% !important; margin-top: 20px !important; margin-left: 0; }
+  
+    footer { width: 100%; }
+  }
+  
+  /* MD: 768–991px */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    html { font-size: 16px; }
+    body { font-size: 1.1rem; }
+  
+    .imagen_fondo { width: 100%; }
+    .overlay-content h1 { font-size: 2.5rem; margin-bottom: 20px; padding-left: 0; }
+  
+    .pintodescription{ width: 100% !important; margin: 0px; padding: 100px;}
+  
+    #servicesSection { width: 100% !important; height: 700px;}
+    .card { height: 700px; }
+    .card-body h5 { margin : 50px; font-size: 20px;}
+    .card-body p { font-size: 15px; }
+    .card-extra {
+      display: none;
+    }
+    .carousel { width: 100%; }
+    .carousel-inner{ margin-left: 0; width: 100% !important; margin: 100px 50px 100px 0px; }
+  
+    .want{ width: 100% !important; padding-right: 0 !important; }
+    .containeraboutus img{ padding-top: 5px; height: 260px; width: 260px; }
+    .calendly-inline-widget{ height: 300px; width: 100%; margin-left: 0; }
+  
+    footer { width: 100%; }
+  }
+  
+  /* LG: 992–1199px */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    html, body {
+      overflow-x: hidden;
+    }
+  
+    .imagen_fondo { 
+      width: 100%; 
+      max-width: 100%; 
+    }
+  
+    .overlay-content h1 { 
+      font-size: 3rem; 
+      margin-bottom: 20px; 
+    }
+  
+    .pintodescription { 
+      width: 80% !important; 
+      margin: 80px auto; 
+      max-width: 100%;
+      font-size: 30px;
+    }
+  
+    #servicesSection { 
+      width: 100% !important; 
+      max-width: 100%; 
+    }
+  
+    .card { 
+      height: 780px; 
+      max-width: 100%; 
+    }
+  
+    .card:hover .card-body p { 
+      font-size: 0.95rem; 
+    }
+  
+    .carousel-inner { 
+      width: 100% !important; 
+      max-width: 100%; 
+      margin:80px 50px 80px 0px;
+    }
+  
+    .carousel-control-next { 
+      left: auto !important; 
+    }
+  
+    .want { 
+      margin-left: 0 !important; 
+    }
+  
+    .imgaboutus { 
+      height: 300px; 
+      width: 300px; 
+      margin-left: 0; 
+    }
+  
+    .calendly-inline-widget { 
+      height: 400px !important; 
+      width: 300px !important; 
+      margin-left: 0; 
+    }
+  
+    footer { 
+      width: 100% !important; 
+      max-width: 100%; 
+    }
+  }
+  
+  /* XL: 1200–1400px */
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    .imagen_fondo{ width: 100%; height: 100vh; }
+  
+    .overlay-content h1 { font-size: 3.75rem; }
+
+    .pintodescription { font-size: 25px;  margin: 100px}
+  
+    #servicesSection { width: 100% !important; }
+    .card { height: 900px; }
+  
+    .carousel-inner { width: 100% !important; margin: 100px 0px 100px 0px; font-size: 25px;}
+    .carousel-control-next-icon { margin-left: 0 !important; }
+  
+    .justify-content-center { width: 100%; }
+  
+    .calendly-inline-widget { height: 350px !important; width: 350px !important; margin-left: 50px; }
+  
+    footer { width: 100%; }
+  }
+  
+  @media (min-width: 1400px) {
+
+    .pintodescription { font-size: 25px;}
+    
+    .carousel-inner { width: 100% !important; margin: 150px 0px 150px 0px; font-size: 30px;}
+    .carousel-control-next-icon { margin-left: 0 !important; }
+
+    .imgaboutus { height:450px; width: 450px; }
+
+    .calendly-inline-widget { height: 600px !important; width: 600px !important; margin-left: 50px; }
+
+  }
+
+  /* Ocultar "Ver más" en pantallas grandes */
+  @media (hover: hover) and (min-width: 768px) {
+    .see-more {
+      display: none;
+    }
+  }
