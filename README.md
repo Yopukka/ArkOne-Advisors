@@ -11,7 +11,7 @@ Commercial real estate landing page built with **HTML, CSS and vanilla JavaScrip
 ## First View
 ![Main](docs/ArkOnemain.png)
 
-##Second View
+## Second View
 
 ![Second](docs/ArkOnesecond.png)
 
