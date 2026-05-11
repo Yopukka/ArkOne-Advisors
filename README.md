@@ -8,8 +8,8 @@ Commercial real estate landing page built with **HTML, CSS and vanilla JavaScrip
 
 ## 📸 Screenshots
 
-![Main](docs/ArkOne main.png)
-![](docs/ArkOne second.png)
+![Main](docs/ArkOnemain.png)
+![](docs/ArkOnesecond.png)
 
 ---
 
